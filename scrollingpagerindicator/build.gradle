@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply from: "$project.rootDir/gradle/publish-lib.gradle"
 
 group=GROUP
 
@@ -16,10 +15,6 @@ android {
     defaultConfig {
         minSdkVersion rootProject.minSdk
         targetSdkVersion rootProject.targetSdk
-    }
-
-    libraryVariants.all {
-        it.getGenerateBuildConfigProvider().get().enabled = false
     }
 }
 
