@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply from: "$project.rootDir/gradle/publish-lib.gradle"
 
+group=GROUP
+
 def customGradleScript = "$project.rootDir/gradle/local.gradle"
 if(new File(customGradleScript).exists()){
     apply from: customGradleScript
